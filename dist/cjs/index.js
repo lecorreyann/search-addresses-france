@@ -28,8 +28,8 @@ __export(esm_exports, {
 });
 module.exports = __toCommonJS(esm_exports);
 var import_config = require("dotenv/config");
-var import_getAddressesFranceV2 = __toESM(require("./application/getAddressesFranceV2.js"), 1);
-var esm_default = import_getAddressesFranceV2.default;
+var import_getAddressesFrance = __toESM(require("./application/getAddressesFrance.js"), 1);
+var esm_default = import_getAddressesFrance.default;
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {});
 //# sourceMappingURL=index.js.map

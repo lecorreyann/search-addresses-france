@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../../esm/infrastructure/tests/unit/getAddressesDetailsFromOkapiApi.test.js"],
-  "sourcesContent": ["import getAddressDetailsFromOkapiApi from \"../../../infrastructure/getAddressDetailsFromOkapiApi.js\";\ndescribe(\"getAddressDetailsFromOkapiApi\", () => {\n    it(\"getAddressesDetailsFromOkapiApi when code is 3034204381\", async () => {\n        const result = await getAddressDetailsFromOkapiApi(\"3034204381\", process.env.OKAPI_API_KEY);\n        expect(result.status).toEqual(200);\n    });\n});\n"],
-  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA,2CAA0C;AAC1C,SAAS,iCAAiC,MAAM;AAC5C,KAAG,2DAA2D,YAAY;AACtE,UAAM,SAAS,UAAM,qCAAAA,SAA8B,cAAc,QAAQ,IAAI,aAAa;AAC1F,WAAO,OAAO,MAAM,EAAE,QAAQ,GAAG;AAAA,EACrC,CAAC;AACL,CAAC;",
-  "names": ["getAddressDetailsFromOkapiApi"]
-}

@@ -1,3 +1,3 @@
 import "dotenv/config";
-import getAddressesFrance from "./application/getAddressesFranceV2.js";
+import getAddressesFrance from "./application/getAddressesFrance.js";
 export default getAddressesFrance;

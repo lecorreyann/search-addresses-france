@@ -27,27 +27,21 @@ __export(getAddressesFrance_exports, {
   default: () => getAddressesFrance
 });
 module.exports = __toCommonJS(getAddressesFrance_exports);
-var import_getAddressDetailsFromOkapiApi = __toESM(require("../infrastructure/getAddressDetailsFromOkapiApi.js"), 1);
-var import_getAddressesFromOkapiApi = __toESM(require("../infrastructure/getAddressesFromOkapiApi.js"), 1);
+var import_getAddressesFromGouvAdresseApi = __toESM(require("../infrastructure/getAddressesFromGouvAdresseApi.js"), 1);
 async function getAddressesFrance(query) {
-  if (!process.env.OKAPI_API_KEY) {
-    throw new Error("OKAPI API Key is not defined");
-  }
   let addresses = [];
-  const response = await (0, import_getAddressesFromOkapiApi.default)(query, process.env.OKAPI_API_KEY);
+  const response = await (0, import_getAddressesFromGouvAdresseApi.default)(query);
+  const data = await response.json();
   if (response.status === 200) {
-    const data = await response.json();
-    for await (let address of data) {
-      const addressDetails = await (0, import_getAddressDetailsFromOkapiApi.default)(address.code, process.env.OKAPI_API_KEY);
-      const data2 = await addressDetails.json();
+    for (let address of data.features) {
       addresses.push({
-        postal_code: data2.codePostal,
-        city: data2.commune,
-        road: `${data2.libelleVoie}${data2.lieuDit ? ` ${data2.lieuDit}` : ""}`,
-        number: data2.numeroVoie,
+        postal_code: address.properties.postcode,
+        city: address.properties.city,
+        road: address.properties.name,
+        number: address.properties.housenumber ? address.properties.housenumber : "",
         country: "France",
-        latitude: 0,
-        longitude: 0
+        latitude: address.geometry.coordinates[1],
+        longitude: address.geometry.coordinates[0]
       });
     }
   }

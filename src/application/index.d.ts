@@ -1,18 +1,3 @@
-declare interface OKAPIAdresse {
-  code: string;
-  adresse: string;
-}
-
-type OKAPIControlAdresseApiResponse = OKAPIAdresse[];
-
-declare interface OKAPIAdresseDetails {
-  numeroVoie: string;
-  libelleVoie: string;
-  lieuDit: string;
-  codePostal: string;
-  commune: string;
-}
-
 declare interface GouvAdresseApiResponse {
   features: Feature[];
 }
