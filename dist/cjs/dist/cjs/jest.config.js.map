@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../../esm/dist/cjs/jest.config.js"],
-  "sourcesContent": ["\"use strict\";\nObject.defineProperty(exports, \"__esModule\", { value: true });\nrequire(\"dotenv/config\");\nconst jestConfig = {\n    preset: \"ts-jest/presets/js-with-ts\",\n    testEnvironment: \"node\",\n    moduleNameMapper: {\n        \"^@/(.*)$\": \"<rootDir>/src/$1\"\n    },\n    transformIgnorePatterns: [\"node_modules/\\\\.pnpm/(?!node-fetch|fetch-blob)\"],\n    testTimeout: 3e4,\n    testPathIgnorePatterns: [\"<rootDir>/dist/\"]\n};\nexports.default = jestConfig;\n"],
-  "mappings": ";AACA,OAAO,eAAe,SAAS,cAAc,EAAE,OAAO,KAAK,CAAC;AAC5D,QAAQ,eAAe;AACvB,MAAM,aAAa;AAAA,EACf,QAAQ;AAAA,EACR,iBAAiB;AAAA,EACjB,kBAAkB;AAAA,IACd,YAAY;AAAA,EAChB;AAAA,EACA,yBAAyB,CAAC,gDAAgD;AAAA,EAC1E,aAAa;AAAA,EACb,wBAAwB,CAAC,iBAAiB;AAC9C;AACA,QAAQ,UAAU;",
-  "names": []
-}

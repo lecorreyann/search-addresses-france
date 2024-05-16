@@ -1,4 +1,4 @@
-import getAddressesFranceV2 from "@/application/getAdressesFranceV2";
+import getAddressesFranceV2 from "@/application/getAddressesFranceV2";
 
 describe("getAddressesFrance", () => {
   it("getAddressesFrance when query is 19 rue du Creux", async () => {

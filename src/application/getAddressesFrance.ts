@@ -17,14 +17,14 @@ export default async function getAddressesFrance(
   );
 
   if (response.status === 200) {
-    const data = await response.json();
+    const data = (await response.json()) as OKAPIControlAdresseApiResponse;
     for await (let address of data) {
       const addressDetails = await getAddressDetailsFromOkapiApi(
         address.code,
         process.env.OKAPI_API_KEY as string
       );
 
-      const data = await addressDetails.json();
+      const data = (await addressDetails.json()) as OKAPIAdresseDetails;
       addresses.push({
         postal_code: data.codePostal,
         city: data.commune,

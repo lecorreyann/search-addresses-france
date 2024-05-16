@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["../../../../esm/infrastructure/tests/unit/getAddressFromGouvAdresseApi.test.js"],
+  "sourcesContent": ["import getAddressesFromGouvAdresseApi from \"../../../infrastructure/getAddressesFromGouvAdresseApi.js\";\ndescribe(\"getAddressFromGouvAdresseApi\", () => {\n    it(\"getAddressFromGouvAdresseApi when query is 19 rue du Creux\", async () => {\n        const result = await getAddressesFromGouvAdresseApi(\"19 rue du Creux\");\n        expect(result.status).toEqual(200);\n    });\n});\n"],
+  "mappings": ";;;;;;;;;;;;;;;;;;;AAAA,4CAA2C;AAC3C,SAAS,gCAAgC,MAAM;AAC3C,KAAG,8DAA8D,YAAY;AACzE,UAAM,SAAS,UAAM,sCAAAA,SAA+B,iBAAiB;AACrE,WAAO,OAAO,MAAM,EAAE,QAAQ,GAAG;AAAA,EACrC,CAAC;AACL,CAAC;",
+  "names": ["getAddressesFromGouvAdresseApi"]
+}
