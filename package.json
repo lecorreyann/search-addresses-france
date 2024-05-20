@@ -1,7 +1,7 @@
 {
   "name": "@lecorreyann/search-addresses-france",
   "description": "Search french addresses",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "main": "./dist/cjs/index.js",
   "module": "./dist/esm/index.js",
   "types": "./dist/types/index.d.ts",
@@ -42,7 +42,6 @@
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "dotenv": "^16.4.5",
     "node-fetch": "^3.3.2"
   }
 }
