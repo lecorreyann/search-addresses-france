@@ -1,5 +1,5 @@
-import { Address } from "@/domain/Address";
-import getAddressesFromGouvAdresseApi from "@/infrastructure/getAddressesFromGouvAdresseApi";
+import { Address } from "../domain/Address";
+import getAddressesFromGouvAdresseApi from "../infrastructure/getAddressesFromGouvAdresseApi";
 
 export default async function getAddressesFrance(
   query: string
@@ -7,7 +7,7 @@ export default async function getAddressesFrance(
   let addresses: Address[] = [];
 
   const response = await getAddressesFromGouvAdresseApi(query);
-  const data = (await response.json()) as GouvAdresseApiResponse;
+  const data = await response.json();
 
   if (response.status === 200) {
     for (let address of data.features) {

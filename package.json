@@ -1,27 +1,11 @@
 {
   "name": "@lecorreyann/search-addresses-france",
   "description": "Search french addresses",
-  "version": "1.0.4",
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.js",
-  "types": "./dist/types/index.d.ts",
-  "files": [
-    "dist"
-  ],
-  "type": "module",
-  "exports": {
-    "./package.json": "./package.json",
-    ".": {
-      "types": "./dist/types/index.d.ts",
-      "require": "./dist/cjs/index.js",
-      "import": "./dist/esm/index.js"
-    }
-  },
+  "version": "1.0.5",
+  "main": "./dist/index.js",
   "scripts": {
     "test": "jest",
-    "start": "tsc --watch",
-    "build": "tsc && tsc-alias -p tsconfig.json",
-    "postbuild": "esm2cjs --in dist/esm --out dist/cjs -l error"
+    "build": "tsc"
   },
   "repository": {
     "type": "git",
@@ -34,14 +18,9 @@
   },
   "homepage": "https://github.com/lecorreyann/search-addresses-france#readme",
   "devDependencies": {
-    "@alcalzone/esm2cjs": "^1.1.2",
     "@types/jest": "^29.5.12",
     "jest": "^29.7.0",
     "ts-jest": "^29.1.2",
-    "tsc-alias": "^1.8.10",
     "typescript": "^5.4.5"
-  },
-  "dependencies": {
-    "node-fetch": "^3.3.2"
   }
 }

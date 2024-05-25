@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["../../esm/domain/Address.js"],
-  "sourcesContent": ["export {};\n"],
-  "mappings": ";;;;;;;;;;;;;;AAAA;AAAA;",
-  "names": []
-}
